@@ -15,6 +15,9 @@ s.run().every(8).hours().fromStartOfDay().if({day: "monday"}).function(() => {})
 
 // Runs on *:00:00 if it is third week of month. 
 s.run().on().hour().if({week: 3}).function(() => {});
+
+// Runs 8 times each hour if week is 3th. 
+s.run(8).times().in().hour().if({week: 3}).function(() => {});
 ```
 
 ## Authors
