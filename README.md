@@ -9,7 +9,7 @@ Constraint based cron-like scheduler.
 * [Goal for MVP](#goal-for-mvp)
 * [Documentation](#documentation)
 	* [Using chaining for configuration](#using-chaining-for-configuration)
-	* [```run(int)```](#runint)
+	* [```schedulr run(int)```](#schedulr-runint)
 * [Authors](#authors)
 
 <!-- vim-markdown-toc -->
@@ -38,9 +38,11 @@ s.run(8).times().in().hour().if({week: 3}).function(() => {});
 
 Since most of cron-like schedulers are hard to learn for people who are just starting, I decided to make my very easy for humans to read and also made it so users can do a lot more customization that way. 
 
-### ```run(int)```
+### ```schedulr run(int)```
 
-Run takes as param the number of times you want to run function in certain interval. *default is 1*
+```run``` takes as param the number of times you want to run function in certain interval. *default is 1*
+
+It returns instance of schedulr. 
 
 ## Authors
 
