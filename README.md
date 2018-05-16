@@ -12,7 +12,7 @@ Constraint based cron-like scheduler.
 	* [```schedulr run(int)```](#schedulr-runint)
 	* [```schedulr times()```, ```schedulr in()```](#schedulr-times-schedulr-in)
 	* [```schedulr every()```](#schedulr-every)
-	* [```schedulr years()```, ```schedulr months()```, ```schedulr weeks()```, ```schedulr days()```, ```schedulr hours()```, ```schedulr minutes()```, ```schedulr miliseconds()```](#schedulr-years-schedulr-months-schedulr-weeks-schedulr-days-schedulr-hours-schedulr-minutes-schedulr-miliseconds)
+	* [```schedulr years()```, ```schedulr months()```, ```schedulr weeks()```, ```schedulr days()```, ```schedulr hours()```, ```schedulr minutes()```](#schedulr-years-schedulr-months-schedulr-weeks-schedulr-days-schedulr-hours-schedulr-minutes)
 	* [```schedulr fromNow()```, ```schedulr fromStartOfDay()```](#schedulr-fromnow-schedulr-fromstartofday)
 	* [```schedult if(array)```](#schedult-ifarray)
 	* [```schedulr function(function)```](#schedulr-functionfunction)
@@ -59,7 +59,7 @@ Sets multiplier for time interval.
 
 These functions are there just to make chain mora human readable. 
 
-### ```schedulr years()```, ```schedulr months()```, ```schedulr weeks()```, ```schedulr days()```, ```schedulr hours()```, ```schedulr minutes()```, ```schedulr miliseconds()```
+### ```schedulr years()```, ```schedulr months()```, ```schedulr weeks()```, ```schedulr days()```, ```schedulr hours()```, ```schedulr minutes()```
 
 These functions add constraint so function runs every x * time interval, based on value set using ```schedulr every(int)```
 

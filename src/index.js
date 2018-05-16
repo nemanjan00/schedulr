@@ -9,11 +9,11 @@ const originalOptions = {
 };
 
 module.exports = {
-	run: () => {
+	run: (divider) => {
 		// How often to check if it changed. (check if unixtime is dividable by this number. )
 
 		const intervals = {};
-		intervals.milisecond =  1;
+		intervals.milisecond =  1000;
 		intervals.second = intervals.milisecond * 1000;
 		intervals.minute = intervals.second * 60;
 		intervals.hour = intervals.minute * 60;
@@ -49,12 +49,12 @@ module.exports = {
 
 				constraints.forEach((constraint) => {
 					if(constraint.typeOfConstraint == "generated"){
-						if(intervals[constraint.interval] < min){
-							min = intervals[constraint.interval];
+						if((intervals[constraint.interval] / constraint.divider) * constraint.multiplier < min){
+							min = intervals[constraint.interval] / constraint.divider * constraint.multiplier;
 						} else {
 							Object.keys(intervals).forEach((interval) => {
 								if(constraint[interval] !== undefined && intervals[interval] < min){
-									min = intervals[interval];
+									min = intervals[interval] / constraint.divider * constraint.multiplier;
 								}
 							});
 						}
@@ -65,7 +65,7 @@ module.exports = {
 					clearInterval(interval);
 				}
 
-				interval = setInterval(s.checkConstraints, min);
+				interval = setInterval(s.checkConstraints, min / 1000);
 
 				return s;
 			},
@@ -118,6 +118,12 @@ module.exports = {
 			//TODO: From today
 			fromToday: () => s.fromNow,
 
+			//TODO: From this month
+			fromThisMonth: () => s.fromNow,
+
+			//TODO: From this year
+			fromThisYear: () => s.fromNow,
+
 			if: (options) => {
 				options.type = "custom";
 
@@ -135,10 +141,34 @@ module.exports = {
 
 				s.setTimer();
 
+				callback();
+
 				return s;
 			},
 			checkConstraints: () => {
-				s.runCallbacks();
+				let valid = true;
+				const date = new Date();
+
+				constraints.forEach((constraint) => {
+					if(constraint.interval == "year") {
+						//TODO: Year
+					} else if(constraint.interval == "month"){
+						//TODO: Month
+					} else {
+						let difference = (date * 1) - (new Date(constraint.referenceTime) * 1);
+
+						difference = difference % (((intervals[constraint.interval] / 1000) / constraint.divider) * constraint.multiplier);
+						difference = difference - difference % 100;
+
+						if(difference !== 0){
+							valid = false;
+						}
+					}
+				});
+
+				if(valid){
+					s.runCallbacks();
+				}
 
 				return s;
 			},
@@ -161,7 +191,7 @@ module.exports = {
 
 		s.setDefaultOptions();
 
-		return s;
+		return s.run(divider);
 	}
 };
 

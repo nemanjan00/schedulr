@@ -3,7 +3,7 @@ const s = require("../");
 
 let counter = 0;
 
-s.run().every(1).second().function(() => {
-	console.log(++counter);
+s.run(15).times().every(15).second().function(() => {
+	console.log(counter++);
 });
 
