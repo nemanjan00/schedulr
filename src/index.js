@@ -151,8 +151,10 @@ module.exports = {
 
 				constraints.forEach((constraint) => {
 					if(constraint.interval == "year") {
+						console.log("Using year as interval is not yet supported. ");
 						//TODO: Year
 					} else if(constraint.interval == "month"){
+						console.log("Using month as interval is not yet supported. ");
 						//TODO: Month
 					} else {
 						let difference = (date * 1) - (new Date(constraint.referenceTime) * 1);
@@ -182,7 +184,6 @@ module.exports = {
 		const aliases = {
 			times: s.doNothing,
 			in: s.doNothing
-
 		};
 
 		Object.keys(aliases).forEach((alias) => {
