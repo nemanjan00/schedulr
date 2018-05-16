@@ -1,0 +1,10 @@
+{
+  "name": "schedulr",
+  "version": "0.0.0",
+  "description": "Constraint based cron-like scheduler. ",
+  "main": "index.js",
+  "repository": "git@github.com:nemanjan00/schedulr.git",
+  "author": "Nemanja Nedeljkovic <nemanjan00@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
