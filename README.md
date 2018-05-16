@@ -11,6 +11,8 @@ Constraint based cron-like scheduler.
 	* [Using chaining for configuration](#using-chaining-for-configuration)
 	* [```schedulr run(int)```](#schedulr-runint)
 	* [```schedulr times()```, ```schedulr in()```](#schedulr-times-schedulr-in)
+	* [```schedulr every()```](#schedulr-every)
+	* [```schedulr years()```, ```schedulr months()```, ```schedulr weeks()```, ```schedulr days()```, ```schedulr hours()```, ```schedulr minutes()```, ```schedulr miliseconds()```, ```schedulr nanoeseonds()```](#schedulr-years-schedulr-months-schedulr-weeks-schedulr-days-schedulr-hours-schedulr-minutes-schedulr-miliseconds-schedulr-nanoeseonds)
 * [Authors](#authors)
 
 <!-- vim-markdown-toc -->
@@ -44,6 +46,18 @@ Since most of cron-like schedulers are hard to learn for people who are just sta
 ```run``` takes as param the number of times you want to run function in certain interval. *default is 1*
 
 ### ```schedulr times()```, ```schedulr in()```
+
+These functions are there just to make chain mora human readable. 
+
+### ```schedulr every()```
+
+Sets multiplier for time interval. 
+
+These functions are there just to make chain mora human readable. 
+
+### ```schedulr years()```, ```schedulr months()```, ```schedulr weeks()```, ```schedulr days()```, ```schedulr hours()```, ```schedulr minutes()```, ```schedulr miliseconds()```, ```schedulr nanoeseonds()```
+
+These functions add constraint so function runs every x * time interval, based on value set using ```schedulr every(int)```
 
 These functions are there just to make chain mora human readable. 
 
