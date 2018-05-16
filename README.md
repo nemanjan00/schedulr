@@ -10,6 +10,7 @@ Constraint based cron-like scheduler.
 * [Documentation](#documentation)
 	* [Using chaining for configuration](#using-chaining-for-configuration)
 	* [```schedulr run(int)```](#schedulr-runint)
+	* [```schedulr times()```, ```schedulr in()```](#schedulr-times-schedulr-in)
 * [Authors](#authors)
 
 <!-- vim-markdown-toc -->
@@ -42,7 +43,9 @@ Since most of cron-like schedulers are hard to learn for people who are just sta
 
 ```run``` takes as param the number of times you want to run function in certain interval. *default is 1*
 
-It returns instance of schedulr. 
+### ```schedulr times()```, ```schedulr in()```
+
+These functions are there just to make chain mora human readable. 
 
 ## Authors
 
