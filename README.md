@@ -12,10 +12,11 @@ Constraint based cron-like scheduler.
 	* [```schedulr run(int)```](#schedulr-runint)
 	* [```schedulr times()```, ```schedulr in()```](#schedulr-times-schedulr-in)
 	* [```schedulr every()```](#schedulr-every)
-	* [```schedulr years()```, ```schedulr months()```, ```schedulr weeks()```, ```schedulr days()```, ```schedulr hours()```, ```schedulr minutes()```, ```schedulr miliseconds()```, ```schedulr nanoeseonds()```](#schedulr-years-schedulr-months-schedulr-weeks-schedulr-days-schedulr-hours-schedulr-minutes-schedulr-miliseconds-schedulr-nanoeseonds)
+	* [```schedulr years()```, ```schedulr months()```, ```schedulr weeks()```, ```schedulr days()```, ```schedulr hours()```, ```schedulr minutes()```, ```schedulr miliseconds()```](#schedulr-years-schedulr-months-schedulr-weeks-schedulr-days-schedulr-hours-schedulr-minutes-schedulr-miliseconds)
 	* [```schedulr fromNow()```, ```schedulr fromStartOfDay()```](#schedulr-fromnow-schedulr-fromstartofday)
 	* [```schedult if(array)```](#schedult-ifarray)
 	* [```schedulr function(function)```](#schedulr-functionfunction)
+	* [```schedulr and(int)```](#schedulr-andint)
 * [Authors](#authors)
 
 <!-- vim-markdown-toc -->
@@ -58,7 +59,7 @@ Sets multiplier for time interval.
 
 These functions are there just to make chain mora human readable. 
 
-### ```schedulr years()```, ```schedulr months()```, ```schedulr weeks()```, ```schedulr days()```, ```schedulr hours()```, ```schedulr minutes()```, ```schedulr miliseconds()```, ```schedulr nanoeseonds()```
+### ```schedulr years()```, ```schedulr months()```, ```schedulr weeks()```, ```schedulr days()```, ```schedulr hours()```, ```schedulr minutes()```, ```schedulr miliseconds()```
 
 These functions add constraint so function runs every x * time interval, based on value set using ```schedulr every(int)```
 
@@ -75,6 +76,10 @@ This function takes array of constraints and adds them to constraints array.
 ### ```schedulr function(function)```
 
 This function adds function to list of functions to be called when constraints added so far got resolved. 
+
+### ```schedulr and(int)```
+
+This function starts new constraint and uses the same arguments as ```run```. 
 
 ## Authors
 
