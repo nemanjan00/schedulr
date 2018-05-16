@@ -1,5 +1,5 @@
 {
-  "name": "schedulr",
+  "name": "@nemanjan00/schedulr",
   "version": "0.0.1",
   "description": "Constraint based cron-like scheduler. ",
   "main": "index.js",
