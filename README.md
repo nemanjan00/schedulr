@@ -13,6 +13,9 @@ Constraint based cron-like scheduler.
 	* [```schedulr times()```, ```schedulr in()```](#schedulr-times-schedulr-in)
 	* [```schedulr every()```](#schedulr-every)
 	* [```schedulr years()```, ```schedulr months()```, ```schedulr weeks()```, ```schedulr days()```, ```schedulr hours()```, ```schedulr minutes()```, ```schedulr miliseconds()```, ```schedulr nanoeseonds()```](#schedulr-years-schedulr-months-schedulr-weeks-schedulr-days-schedulr-hours-schedulr-minutes-schedulr-miliseconds-schedulr-nanoeseonds)
+	* [```schedulr fromNow()```, ```schedulr fromStartOfDay()```](#schedulr-fromnow-schedulr-fromstartofday)
+	* [```schedult if(array)```](#schedult-ifarray)
+	* [```schedulr function(function)```](#schedulr-functionfunction)
 * [Authors](#authors)
 
 <!-- vim-markdown-toc -->
@@ -60,6 +63,18 @@ These functions are there just to make chain mora human readable.
 These functions add constraint so function runs every x * time interval, based on value set using ```schedulr every(int)```
 
 These functions are there just to make chain mora human readable. 
+
+### ```schedulr fromNow()```, ```schedulr fromStartOfDay()```
+
+These 2 functions set reference point for constraint solver to calculate intervals against. Default value is now. 
+
+### ```schedult if(array)```
+
+This function takes array of constraints and adds them to constraints array. 
+
+### ```schedulr function(function)```
+
+This function adds function to list of functions to be called when constraints added so far got resolved. 
 
 ## Authors
 
