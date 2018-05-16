@@ -8,6 +8,8 @@ Constraint based cron-like scheduler.
 
 * [Goal for MVP](#goal-for-mvp)
 * [Documentation](#documentation)
+	* [Installation](#installation)
+	* [What is not ready yet?](#what-is-not-ready-yet)
 	* [Using chaining for configuration](#using-chaining-for-configuration)
 	* [```schedulr run(int)```](#schedulr-runint)
 	* [```schedulr times()```, ```schedulr in()```](#schedulr-times-schedulr-in)
@@ -40,6 +42,18 @@ s.run(8).times().in().hour().if({week: 3}).function(() => {});
 ```
 
 ## Documentation
+
+### Installation
+
+```
+npm install constraint-schedulr
+```
+
+### What is not ready yet? 
+
+ * if function
+
+ * month and year interval
 
 ### Using chaining for configuration
 
