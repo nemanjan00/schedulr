@@ -2,6 +2,16 @@
 
 Constraint based cron-like scheduler. 
 
+## Summary
+
+<!-- vim-markdown-toc GFM -->
+
+* [Goal for MVP](#goal-for-mvp)
+* [Documentation](#documentation)
+* [Authors](#authors)
+
+<!-- vim-markdown-toc -->
+
 ## Goal for MVP
 
 ```javascript
@@ -19,6 +29,8 @@ s.run().on().hour().if({week: 3}).function(() => {});
 // Runs 8 times each hour if week is 3th. 
 s.run(8).times().in().hour().if({week: 3}).function(() => {});
 ```
+
+## Documentation
 
 ## Authors
 
