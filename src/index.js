@@ -125,6 +125,8 @@ module.exports = {
 			fromThisYear: () => s.fromNow,
 
 			if: (options) => {
+				console.log("If is not yet fully supported. ");
+
 				options.type = "custom";
 
 				constraints.push(options);
